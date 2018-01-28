@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        loadDiceFace()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,9 +31,13 @@ class ViewController: UIViewController {
 
 
     @IBAction func playButton(_ sender: UIButton) {
+        loadDiceFace()
+       
+    }
+    func loadDiceFace()  {
         randomDiceInexLeft = Int(arc4random_uniform(6))
         randomDiceIndexRight = Int(arc4random_uniform(6))
-//        print(randomDiceInexLeft)
+        //        print(randomDiceInexLeft)
         
         diceleft.image = UIImage(named :diceArray[randomDiceInexLeft])
         diceRight.image = UIImage(named :diceArray[randomDiceIndexRight])
