@@ -43,5 +43,8 @@ class ViewController: UIViewController {
         diceRight.image = UIImage(named :diceArray[randomDiceIndexRight])
         
     }
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        loadDiceFace()
+    }
 }
 
