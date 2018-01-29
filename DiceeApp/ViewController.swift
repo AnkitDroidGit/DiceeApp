@@ -35,8 +35,8 @@ class ViewController: UIViewController {
        
     }
     func loadDiceFace()  {
-        randomDiceInexLeft = Int(arc4random_uniform(6))
-        randomDiceIndexRight = Int(arc4random_uniform(6))
+        randomDiceInexLeft = Int(arc4random_uniform(UInt32(diceArray.count)))
+        randomDiceIndexRight = Int(arc4random_uniform(UInt32(diceArray.count)))
         //        print(randomDiceInexLeft)
         
         diceleft.image = UIImage(named :diceArray[randomDiceInexLeft])
